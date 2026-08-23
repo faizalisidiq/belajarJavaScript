@@ -1,4 +1,3 @@
-let nilai = 85;
-
-let status = nilai >= 75 ? "A" : "B";
-console.log(status)
+for (let i = 1; i <= 10; i++) {
+  console.log(`Halo ke ${i}`);
+}
