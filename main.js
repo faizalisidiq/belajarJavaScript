@@ -1,11 +1,13 @@
-let i = 4;
-
-while (i <= 10) {
-  console.log(`halo ke-${i}`);
-  i++;
+for (let i = 0; i < 10; i++) {
+  if (i === 3) {
+    continue;
+  }
+  console.log(i)
 }
 
-do {
-  console.log(`halo ke-${i}`);
-  i++;
-} while (i < 10);
+for (let i = 0; i < 10; i++) {
+  if (i === 3) {
+    break;
+  }
+  console.log(i)
+}
