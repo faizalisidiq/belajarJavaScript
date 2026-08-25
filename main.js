@@ -1,5 +1,10 @@
-let produkElektronik = ["Laptop", "HP", "PC", "Kulkas"];
+let mahasiswa = {
+  name: "Faiz Ali Sidiq",
+  jurusan: "Teknik Informatika",
+  age: 22,
+  gender: "Laki-laki",
+};
 
-for (let i = 0; i < produkElektronik.length; i++) {
-  console.log(`Produk ke-${i+1} adalah : ${produkElektronik[i]}`);
+for (let i in mahasiswa) {
+  console.log(`${i} : ${mahasiswa[i]}`);
 }
