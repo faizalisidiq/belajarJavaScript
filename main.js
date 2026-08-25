@@ -1,13 +1,5 @@
-for (let i = 0; i < 10; i++) {
-  if (i === 3) {
-    continue;
-  }
-  console.log(i)
-}
+let produkElektronik = ["Laptop", "HP", "PC", "Kulkas"];
 
-for (let i = 0; i < 10; i++) {
-  if (i === 3) {
-    break;
-  }
-  console.log(i)
+for (let i = 0; i < produkElektronik.length; i++) {
+  console.log(`Produk ke-${i+1} adalah : ${produkElektronik[i]}`);
 }
