@@ -43,6 +43,9 @@ let produk = [
 // console.log(namaProduk);
 
 // .filter()
-let stokBanyak = produk.filter(item => item.stock >= 8)
-console.log(stokBanyak);
+// let stokBanyak = produk.filter(item => item.stock >= 8)
+// console.log(stokBanyak);
 
+// .find()
+let cariMouse = produk.find(item => item.name === "Mouse");
+console.log(cariMouse);
