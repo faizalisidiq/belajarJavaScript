@@ -31,12 +31,18 @@ let produk = [
     stock: 8,
   },
 ];
-
-let namaProduk = produk.map(item => item.name)
-console.log(namaProduk);
-
+// looping array of object
 // for (let i = 0; i < produk.length; i++) {
 //   console.log(`\nNama Produk: ${produk[i].name}`);
 //   console.log(`Harga Produk: ${produk[i].price}`);
 //   console.log(`Stok Produk: ${produk[i].stock}`);
 // }
+
+// .map()
+// let namaProduk = produk.map(item => item.name)
+// console.log(namaProduk);
+
+// .filter()
+let stokBanyak = produk.filter(item => item.stock >= 8)
+console.log(stokBanyak);
+
