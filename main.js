@@ -62,3 +62,15 @@ let urutHarga = [...produk].sort((a, b) => a.price - b.price);
 
 console.log(urutHarga);
 console.log(produk)
+
+// 1. Daftar produk yang stok-nya kurang dari 10.
+let stokKurangDari10 = produk.filter((item) => item.stock < 10);
+console.log(stokKurangDari10);
+
+// 2. Total nilai semua barang (harga × stok).
+let totalHarga = produk.reduce((total, item) => total + item.stock * item.price, 0);
+console.log(totalHarga);
+
+// 3. Tampilkan produk termahal.
+let produkTermahal = produk.reduce((max, item) => (item.price > max.price ? item : max));
+console.log(produkTermahal);
