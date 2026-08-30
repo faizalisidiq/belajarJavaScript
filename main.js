@@ -21,14 +21,14 @@ let produk = [
     stock: 10,
   },
   {
-    name: "Hp",
-    price: 120,
-    stock: 5,
-  },
-  {
     name: "Tablet",
     price: 200,
     stock: 8,
+  },
+  {
+    name: "Hp",
+    price: 120,
+    stock: 5,
   },
 ];
 // looping array of object
@@ -51,5 +51,14 @@ let produk = [
 // console.log(cariMouse);
 
 // .reduce()
-let totalHarga = produk.reduce((total, item) => total + item.price, 0);
-console.log(totalHarga);
+// let totalHarga = produk.reduce((total, item) => total + item.price, 0);
+// console.log(totalHarga);
+
+// .sort()
+let urutHarga = [...produk].sort((a, b) => a.price - b.price);
+// let urutHarga = produk.sort((a, b) => a.price - b.price);
+
+// PENTING!!! jika tidak menggunakan spread operator [...produk] maka data produk akan berubah urutannya, karena sort() akan mengubah array aslinya. Dengan menggunakan spread operator, kita membuat salinan dari array produk sehingga array asli tetap utuh.
+
+console.log(urutHarga);
+console.log(produk)
