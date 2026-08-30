@@ -47,5 +47,9 @@ let produk = [
 // console.log(stokBanyak);
 
 // .find()
-let cariMouse = produk.find(item => item.name === "Mouse");
-console.log(cariMouse);
+// let cariMouse = produk.find(item => item.name === "Mouse");
+// console.log(cariMouse);
+
+// .reduce()
+let totalHarga = produk.reduce((total, item) => total + item.price, 0);
+console.log(totalHarga);
