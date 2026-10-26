@@ -31,6 +31,7 @@ let produk = [
     stock: 5,
   },
 ];
+
 // looping array of object
 // for (let i = 0; i < produk.length; i++) {
 //   console.log(`\nNama Produk: ${produk[i].name}`);
@@ -55,22 +56,22 @@ let produk = [
 // console.log(totalHarga);
 
 // .sort()
-let urutHarga = [...produk].sort((a, b) => a.price - b.price);
-// let urutHarga = produk.sort((a, b) => a.price - b.price);
+// let urutHarga = [...produk].sort((a, b) => a.price - b.price);
+let urutHarga = produk.sort((a, b) => a.price - b.price);
 
 // PENTING!!! jika tidak menggunakan spread operator [...produk] maka data produk akan berubah urutannya, karena sort() akan mengubah array aslinya. Dengan menggunakan spread operator, kita membuat salinan dari array produk sehingga array asli tetap utuh.
 
 console.log(urutHarga);
-console.log(produk)
+// console.log(produk)
 
-// 1. Daftar produk yang stok-nya kurang dari 10.
-let stokKurangDari10 = produk.filter((item) => item.stock < 10);
-console.log(stokKurangDari10);
+// // 1. Daftar produk yang stok-nya kurang dari 10.
+// let stokKurangDari10 = produk.filter((item) => item.stock < 10);
+// console.log(stokKurangDari10);
 
-// 2. Total nilai semua barang (harga × stok).
-let totalHarga = produk.reduce((total, item) => total + item.stock * item.price, 0);
-console.log(totalHarga);
+// // 2. Total nilai semua barang (harga × stok).
+// let totalHarga = produk.reduce((total, item) => total + item.stock * item.price, 0);
+// console.log(totalHarga);
 
-// 3. Tampilkan produk termahal.
-let produkTermahal = produk.reduce((max, item) => (item.price > max.price ? item : max));
-console.log(produkTermahal);
+// // 3. Tampilkan produk termahal.
+// let produkTermahal = produk.reduce((max, item) => (item.price > max.price ? item : max));
+// console.log(produkTermahal);
